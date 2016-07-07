@@ -1,0 +1,47 @@
+{
+  "name": "meshblu-core-task-remove-root-session-token",
+  "version": "1.0.0",
+  "description": "Meshblu core task meshblu-core-task-remove-root-session-token",
+  "keywords": [
+    "meshblu",
+    "core",
+    "iot",
+    "task"
+  ],
+  "homepage": "/meshblu-core-task-remove-root-session-token",
+  "bugs": "/meshblu-core-task-remove-root-session-token/issues",
+  "author": {
+    "name": "",
+    "url": ""
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "/meshblu-core-task-remove-root-session-token.git"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul"
+  },
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "meshblu-core-manager-token": "^7.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-coverage": "^0.7.0",
+    "coffee-script": "^1.10.0",
+    "istanbul": "^0.4.4",
+    "meshblu-core-datastore": "^4.6.0",
+    "mocha": "^2.5.3",
+    "mocha-istanbul": "^0.2.0",
+    "mongojs": "^2.4.0",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=5.0.0",
+    "npm": ">=2.10.0"
+  },
+  "license": "MIT"
+}
