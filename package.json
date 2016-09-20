@@ -20,7 +20,10 @@
     "url": "/meshblu-core-task-remove-root-session-token.git"
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul && mocha --reporter json > coverage/mocha.json"
+    "test": "mocha",
+    "coverage": "nyc npm test",
+    "mocha:json": "env NPM_ENV=test mocha --reporter json > coverage/mocha.json",
+    "test:watch": "mocha -w -R mocha-multi --reporter-options spec=-,mocha-osx-reporter=-"
   },
   "dependencies": {
     "coffee-script": "^1.10.0",
@@ -28,13 +31,13 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "coffee-coverage": "^0.7.0",
     "coffee-script": "^1.10.0",
-    "istanbul": "^0.4.4",
     "meshblu-core-datastore": "^4.6.0",
     "mocha": "^2.5.3",
-    "mocha-istanbul": "^0.2.0",
+    "mocha-multi": "^0.9.1",
+    "mocha-osx-reporter": "^0.1.2",
     "mongojs": "^2.4.0",
+    "nyc": "^8.3.0",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0"
   },
@@ -43,5 +46,16 @@
     "node": ">=5.0.0",
     "npm": ">=2.10.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "nyc": {
+    "cache": true,
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "json"
+    ],
+    "extension": [
+      ".coffee"
+    ]
+  }
 }
